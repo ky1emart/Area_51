@@ -5,18 +5,13 @@ import com.badlogic.gdx.graphics.Texture;
 import com.ky1emart.area51.backgrounds.ParallaxBackground;
 import com.ky1emart.area51.utils.Updatable;
 
+/**
+ * @author Kyle Martinez
+ */
 public class MenuState extends State implements Updatable, Renderable {
 
-    /**
-     *
-     */
     private ParallaxBackground background;
 
-
-    /**
-     *
-     * @param stateManager
-     */
     public MenuState(StateManager stateManager) {
         super(stateManager);
 
@@ -37,6 +32,6 @@ public class MenuState extends State implements Updatable, Renderable {
 
     @Override
     public void dispose() {
-
+        spriteBatch.dispose();
     }
 }

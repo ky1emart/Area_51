@@ -19,12 +19,14 @@ public class Game extends ApplicationAdapter {
     public static final int SCALE = 2;
 
     /**
-     * The virtual height of the application window in pixels.
+     * The virtual height of the application window in pixels. Note that this value may not be accurate. It is
+     * recommended that you use <code>Gdx.graphics.getHeight()</code>.
      */
     public static final int V_HEIGHT = 320 * SCALE;
 
     /**
-     * The virtual width of the application screen in pixels.
+     * The virtual width of the application screen in pixels. Note that this value may not be accurate. It is
+     * recommended that you use <code>Gdx.graphics.getWidth()</code>.
      */
     public static final int V_WIDTH = 480 * SCALE;
 
@@ -32,8 +34,6 @@ public class Game extends ApplicationAdapter {
      * The states manager manages the states by controlling what will be rendered and updated at any given time.
      */
     private StateManager stateManager;
-
-
 
 	@Override
 	public void create() {

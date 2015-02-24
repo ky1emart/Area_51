@@ -20,8 +20,6 @@ public final class StateManager implements Updatable, Renderable {
      */
     private Game game;
 
-
-
     /**
      * Constructs a new <code>StateManager</code>.
      * @param game the game that will be rendering and updating this states manager

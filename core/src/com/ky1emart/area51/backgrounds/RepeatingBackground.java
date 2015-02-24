@@ -12,7 +12,6 @@ public class RepeatingBackground implements Drawable {
      */
     protected final Texture texture;
 
-
     /**
      *
      */

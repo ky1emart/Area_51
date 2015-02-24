@@ -6,6 +6,9 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Vector2;
 import com.ky1emart.area51.utils.Updatable;
 
+/**
+ *
+ */
 public class ParallaxBackground extends RepeatingBackground implements Updatable {
 
     /**
@@ -18,7 +21,6 @@ public class ParallaxBackground extends RepeatingBackground implements Updatable
      */
     private Vector2 location;
 
-
     /**
      *
      * @param texture
@@ -30,9 +32,9 @@ public class ParallaxBackground extends RepeatingBackground implements Updatable
     }
 
     /**
-    *
-            * @param verticalVelocity
-    */
+     *
+     * @param verticalVelocity
+     */
     public void setVerticalVelocity(int verticalVelocity) {
         this.velocity.x = verticalVelocity;
     }
