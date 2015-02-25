@@ -26,5 +26,8 @@ public abstract class State implements Disposable {
         spriteBatch = new SpriteBatch();
     }
 
-    abstract public void dispose();
+    @Override
+    public final void dispose() {
+        spriteBatch.dispose();
+    }
 }

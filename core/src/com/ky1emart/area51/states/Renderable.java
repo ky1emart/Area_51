@@ -8,5 +8,5 @@ interface Renderable {
     /**
      * Called when the implementing object should render itself.
      */
-    public void render();
+    void render();
 }

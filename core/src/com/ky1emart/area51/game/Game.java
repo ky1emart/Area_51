@@ -35,8 +35,34 @@ public class Game extends ApplicationAdapter {
      */
     private StateManager stateManager;
 
+    /**
+     *
+     */
+    public static ResourceManager res;
+
+    /**
+     *
+     * @param res
+     */
+    private static void loadResources(ResourceManager res) {
+        res.loadTexture("textures/space.png");
+        res.loadTexture("textures/ufo.png");
+        res.loadTexture("textures/jet.png");
+        res.loadTexture("textures/missile.png");
+        res.loadTexture("textures/sky.png");
+
+        res.loadMusic("music/main_state.mp3");
+        res.loadMusic("music/play_state.mp3");
+
+        res.loadSound("sfx/selection.mp3");
+        res.loadSound("sfx/missile.mp3");
+        res.loadSound("sfx/explosion.mp3");
+    }
+
 	@Override
 	public void create() {
+        res = new ResourceManager();
+        loadResources(res);
         stateManager = new StateManager(this);
         stateManager.pushState(new MenuState(stateManager));
 	}

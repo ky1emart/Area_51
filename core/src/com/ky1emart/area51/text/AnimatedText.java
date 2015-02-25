@@ -20,6 +20,11 @@ public final class AnimatedText implements Updatable {
     /**
      *
      */
+    private float timeAccumulator;
+
+    /**
+     *
+     */
     private float stateTime;
 
     /**
@@ -32,9 +37,18 @@ public final class AnimatedText implements Updatable {
         this.frames = frames;
     }
 
+    private void updateIndex() {
+        ++index;
+        index %= frames.length;
+    }
+
     @Override
     public void update(float deltaTime) {
-
+        timeAccumulator += deltaTime;
+        if (timeAccumulator >= stateTime) {
+            updateIndex();
+            timeAccumulator = 0;
+        }
     }
 
     @Override
